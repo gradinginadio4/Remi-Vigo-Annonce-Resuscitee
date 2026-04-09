@@ -305,11 +305,22 @@
             color: #16a34a;
         }
         
+        /* Style des images de comparaison */
+        .comparison-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            display: block;
+        }
+        
         .comparison-text {
             font-size: 0.95rem;
             line-height: 1.8;
             color: var(--text);
             opacity: 0.9;
+            margin-top: 1rem;
         }
         
         .highlight-wrong {
@@ -463,6 +474,32 @@
         /* Gap Psychologique */
         .gap-section {
             background-color: var(--gray-light);
+        }
+        
+        /* Container spécial pour l'image du bien */
+        .property-showcase {
+            max-width: 800px;
+            margin: 2rem auto 3rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 2px solid var(--border);
+            background: var(--white);
+        }
+        
+        .property-showcase img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .property-caption {
+            background: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--text);
+            border-top: 1px solid var(--border);
         }
         
         .loss-calculator {
@@ -672,6 +709,10 @@
                 flex-direction: column;
                 gap: 0.5rem;
             }
+            
+            .comparison-image {
+                margin: 0.75rem 0;
+            }
         }
         
         /* Utility */
@@ -721,6 +762,7 @@
             <div class="comparison-grid">
                 <div class="comparison-card card-before">
                     <span class="card-label label-before">❌ Version Actuelle</span>
+                    <img src="images/before-annonce.jpg" alt="Annonce originale confuse et peu performante" class="comparison-image">
                     <div class="comparison-text">
                         <p><span class="highlight-wrong">"2 chambres"</span> annoncées en header pour un <span class="highlight-wrong">studio + remise non reconnue urbanistiquement</span>. Tarification ambiguë (225.000€ + mention d'un garage sans lien clair). Manque total de contexte sur le rendement 6,2%. Description technique froide sans projection émotionnelle. <strong>Résultat : confusion, méfiance, bounce rate élevé.</strong></p>
                     </div>
@@ -728,6 +770,7 @@
                 
                 <div class="comparison-card card-after">
                     <span class="card-label label-after">✅ Version Optimisée</span>
+                    <img src="images/after-annonce.jpg" alt="Annonce optimisée professionnelle et convertissante" class="comparison-image">
                     <div class="comparison-text">
                         <p><span class="highlight-right">"Investissement clé en main ou 1er achat à Jette (Rendement 6,2%)"</span> — hook immédiat. Transparence sur la nature du bien (studio + annexe). Valeur perçue amplifiée (meubles premium inclus, électricité conforme). Projection claire : <span class="highlight-right">1300€/mois de revenus</span>. <strong>Résultat : curiosité, confiance, demande de visite.</strong></p>
                     </div>
@@ -860,6 +903,14 @@ Met een geschat potentieel huurrendement van € 1300/maand in totaal, is dit ee
                 <h2>Combien coûte réellement cette annonce faible ?</h2>
             </div>
             
+            <!-- IMAGE DU BIEN -->
+            <div class="property-showcase">
+                <img src="images/facade-jette.jpg" alt="Votre bien immobilier au Clos 't Hof ten Berg à Jette">
+                <div class="property-caption">
+                    📍 Clos 't Hof ten Berg 11 Boîte 2 — Ce bien mérite mieux que des leads qui fuient
+                </div>
+            </div>
+            
             <div class="loss-calculator">
                 <div class="loss-label">Sur 6 mois de mise en vente, vous avez déjà perdu environ :</div>
                 <div class="loss-amount">€15.600</div>
@@ -972,12 +1023,12 @@ Met een geschat potentieel huurrendement van € 1300/maand in totaal, is dit ee
             <h2>Rémi, arrêtez de perdre 325€ par jour</h2>
             <p>Votre bien est bon. Votre annonce le tue. En 24h, nous transformons votre description en machine à leads. Pas de redesign complet, pas de budget marketing massif. Juste des mots qui convertissent.</p>
             
-            <a href="mailto:contact@example.com?subject=URGENT: Récupérer mon annonce Jette" class="cta-button" style="font-size: 1.25rem; padding: 1.5rem 4rem;">
+            <a href="https://cal.com/homieux-media/discovery-call-gratuit-discutons-de-vos-defis" class="cta-button" style="font-size: 1.25rem; padding: 1.5rem 4rem;">
                 Récupérer mes leads perdus →
             </a>
             
             <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
-                Réponse garantie sous 2h ouvrées. Analyse gratuite, résultats immédiats.
+                
             </p>
         </div>
     </section>
